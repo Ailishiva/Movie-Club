@@ -14,14 +14,14 @@ const App = () => {
   const [activeList, setActiveList] = useState("Trending");
   const [currentArr, setCurrentArr] = useState([]);
   const [activeUrl, setActiveUrl] = useState(
-    `https://api.themoviedb.org/3/trending/movie/week?api_key=${'7b06b6ce776e0b404fed895c7547f91e'}`
+    `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.REACT_APP_API_KEY}`
   );
 
   const [isLoading, setIsLoading] = useState(false);
 
   const [searchedMovie, setSearchedMovie] = useState("");
   const [searchResultArr, setSearchResultArr] = useState([]);
-  const searchUrl =  `https://api.themoviedb.org/3/search/movie?api_key=${'7b06b6ce776e0b404fed895c7547f91e'}&query=${searchedMovie}`;
+  const searchUrl =  `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${searchedMovie}`;
   //console.log(searchUrl);
   const [movieId, setMovieId] = useState(0);
   const [movieDetails, setMovieDetails] = useState({
@@ -38,7 +38,7 @@ const App = () => {
     productionCompany: "",
     backdropPath: "",
   });
-  const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${'7b06b6ce776e0b404fed895c7547f91e'}&append_to_response=credits`;
+  const movieDetailsUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}&append_to_response=credits`;
 
   const getCurrentList = () => {
     axios.get(activeUrl).then((response) => {
