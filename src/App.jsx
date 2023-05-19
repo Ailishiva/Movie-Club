@@ -68,15 +68,14 @@ const App = () => {
         cast: response.data.credits.cast.map((person) =>
           person.known_for_department === "Acting" ? person : ""
         ),
-        director: response.data.credits.crew.map((person) => {
-          if (person.known_for_department === "Directing") return person.name;
+        director: response.data.credits.crew.map((person) => { if (person.known_for_department === "Directing") return person.name;
         }),
         productionCompany: response.data.production_companies[0].name,
         backdropPath: response.data.backdrop_path,
       });
       setIsLoading(false);
-    });
-  };
+    },)
+    };
 
   useEffect(() => {
     getCurrentList();
