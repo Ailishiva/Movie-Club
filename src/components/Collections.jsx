@@ -12,10 +12,10 @@ const Collections = (props) => {
     setIsActive(newState);
   };
 
-  const trendingUrl = `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.REACT_APP_API_KEY}`;
-  const nowPlayingUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
-  const topRatedUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
-  const upcomingUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
+  const trendingUrl = `https://api.themoviedb.org/3/trending/movie/week?api_key=${'7b06b6ce776e0b404fed895c7547f91e'}`;
+  const nowPlayingUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${'7b06b6ce776e0b404fed895c7547f91e'}&language=en-US&page=1`;
+  const topRatedUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${'7b06b6ce776e0b404fed895c7547f91e'}&language=en-US&page=1`;
+  const upcomingUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${'7b06b6ce776e0b404fed895c7547f91e'}&language=en-US&page=1`;
 
   return (
     <div className="collections">
